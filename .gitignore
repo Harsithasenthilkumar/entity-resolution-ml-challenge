@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+dataset/
+norm/
+cache/
+splits/
+artifacts/
+output/
+*.tsv
+*.parquet
+*.pkl
+*.npz
+*.npy
+*.zip

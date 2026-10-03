@@ -1,0 +1,26 @@
+# Core pipeline — pinned to the versions used for the submitted results.
+numpy==2.4.4
+pyarrow==25.0.1
+pandas==3.0.2
+scipy==1.17.1
+scikit-learn==1.8.0
+
+# String similarity (MIT, SIMD-accelerated C++). Used for every pairwise feature.
+rapidfuzz==3.14.6
+
+# Transliteration for Devanagari/Tamil/Telugu/Bengali/Gujarati -> Latin.
+# Purely algorithmic: NOT an external business lookup.
+Unidecode==1.4.0
+
+# Stage-1 matching model (MIT).
+lightgbm==4.7.0
+
+# Stage-2 cross-encoder re-ranker (src/ce.py).
+# Model: cross-encoder/ms-marco-MiniLM-L6-v2 (Apache-2.0, ~22M parameters).
+# PyTorch must be installed FIRST from the CUDA 12.8 index (required for
+# RTX 50-series GPUs); it is not available from the default PyPI index:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+transformers==5.17.0
+tokenizers==0.23.2
+huggingface-hub==1.33.0
+safetensors==0.8.0
